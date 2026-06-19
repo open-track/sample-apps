@@ -3,9 +3,9 @@
 A minimal TypeScript + React app you can clone, run locally, and remix. It shows a common customer pattern:
 
 1. A user lands on a page with a search box
-2. They enter a **container number** or **master bill of lading (MBL)**
+2. They enter a **container number**, **master bill of lading (MBL)**, or **ocean carrier booking reference**
 3. The app calls the [OpenTrack API](https://developers.opentrack.co/docs/getting-started) and reads the `trackingPage` URL from the response
-4. For a single container, the user gets one button that opens the public TrackIt page
+4. For a single container, the user gets one button that opens the live tracking page
 5. For an MBL with multiple containers, the user gets one button per container
 6. If nothing is tracked yet, the user sees a friendly message to contact their representative
 

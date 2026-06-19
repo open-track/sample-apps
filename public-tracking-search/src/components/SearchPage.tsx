@@ -26,11 +26,15 @@ export function SearchPage() {
   return (
     <main className="page">
       <section className="hero">
-        <p className="eyebrow">OpenTrack sample app</p>
-        <h1>Find a public tracking link</h1>
+        <div className="hero__brand">
+          <img alt="OpenTrack" className="hero__logo" src="/opentrack-logo.png" />
+          <p className="hero__badge">Sample app</p>
+        </div>
+        <h1>Find a container or master bill/booking</h1>
         <p className="lede">
-          Search by container number or master bill of lading (MBL). When OpenTrack is already tracking the shipment,
-          we fetch the public TrackIt URL from the API and link your user straight to live status.
+          Search by container, MBL, or ocean carrier booking reference. When OpenTrack is already tracking the
+          shipment, we fetch the public TrackIt URL from the API and link your user straight to the live tracking
+          page.
         </p>
       </section>
 

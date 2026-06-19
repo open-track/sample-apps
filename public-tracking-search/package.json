@@ -2,7 +2,7 @@
   "name": "opentrack-public-tracking-search",
   "private": false,
   "version": "0.1.0",
-  "description": "Sample app showing how to look up OpenTrack public tracking links by container or MBL",
+  "description": "Sample app for looking up OpenTrack live tracking pages by container, MBL, or booking reference",
   "type": "module",
   "scripts": {
     "dev": "vite",

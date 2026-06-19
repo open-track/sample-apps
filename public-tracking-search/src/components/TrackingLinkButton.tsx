@@ -7,7 +7,7 @@ type TrackingLinkButtonProps = {
 export function TrackingLinkButton({ container }: TrackingLinkButtonProps) {
   return (
     <a className="tracking-link-button" href={container.trackingPage} rel="noreferrer" target="_blank">
-      <span className="tracking-link-button__label">Track {container.containerId}</span>
+      <span className="tracking-link-button__label">View {container.containerId}</span>
       {container.status ? <span className="tracking-link-button__status">{container.status}</span> : null}
     </a>
   );
