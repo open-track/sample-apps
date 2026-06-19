@@ -4,7 +4,7 @@ A minimal TypeScript + React app you can clone, run locally, and remix. It shows
 
 1. A user lands on a page with a search box
 2. They enter a **container number** or **master bill of lading (MBL)**
-3. The app calls the [OpenTrack API](https://docs.opentrack.co/) and reads the `trackingPage` URL from the response
+3. The app calls the [OpenTrack API](https://developers.opentrack.co/docs/getting-started) and reads the `trackingPage` URL from the response
 4. For a single container, the user gets one button that opens the public TrackIt page
 5. For an MBL with multiple containers, the user gets one button per container
 6. If nothing is tracked yet, the user sees a friendly message to contact their representative
@@ -47,9 +47,11 @@ The production server serves the built React app and the `/api/track` endpoint o
 | `SUPPORT_CONTACT_MESSAGE` | No | Message shown when no tracked shipment is found |
 | `PORT` | No | Production server port (default `4173`) |
 
+\*Not required when `DEMO_MODE=true`.
+
 ## OpenTrack API calls used
 
-The sample uses the public v1 read endpoints documented in the OpenTrack API reference:
+The sample uses the public v1 read endpoints documented in the [OpenTrack API getting started guide](https://developers.opentrack.co/docs/getting-started):
 
 | User input | HTTP call | Response field used |
 | --- | --- | --- |
@@ -99,7 +101,7 @@ Set `DEMO_MODE=true` in `.env` to explore the UI without an API key:
 
 ## Related docs
 
-- [OpenTrack API reference](https://docs.opentrack.co/)
+- [OpenTrack API getting started](https://developers.opentrack.co/docs/getting-started)
 
 ## License
 

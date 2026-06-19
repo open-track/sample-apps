@@ -3,6 +3,8 @@ import { FormEvent, useState } from 'react';
 import { searchTracking, type SearchResult } from '../api/searchTracking';
 import { TrackingLinkButton } from './TrackingLinkButton';
 
+const OPENTRACK_DOCS_URL = 'https://developers.opentrack.co/docs/getting-started';
+
 export function SearchPage() {
   const [query, setQuery] = useState('');
   const [result, setResult] = useState<SearchResult>({ status: 'idle' });
@@ -59,8 +61,11 @@ export function SearchPage() {
       <section className="footnote">
         <p>
           This demo calls <code>GET /v1/containers/:containerId</code> and{' '}
-          <code>GET /v1/master-bills/:masterBillNumber</code> on the OpenTrack API. Your API key stays on the server,
-          not in the browser.
+          <code>GET /v1/master-bills/:masterBillNumber</code> on the{' '}
+          <a href={OPENTRACK_DOCS_URL} rel="noreferrer" target="_blank">
+            OpenTrack API
+          </a>
+          . Your API key stays on the server, not in the browser.
         </p>
       </section>
     </main>

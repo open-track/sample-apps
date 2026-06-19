@@ -1,6 +1,6 @@
 # OpenTrack sample apps
 
-Starter projects you can clone and remix to integrate with the [OpenTrack API](https://docs.opentrack.co/).
+Starter projects you can clone and remix to integrate with the [OpenTrack API](https://developers.opentrack.co/docs/getting-started).
 
 ## Samples
 

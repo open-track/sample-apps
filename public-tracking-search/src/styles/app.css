@@ -180,6 +180,14 @@ code {
   font-size: 0.95rem;
 }
 
+.footnote a {
+  color: #0369a1;
+}
+
+.footnote a:hover {
+  color: #075985;
+}
+
 @media (max-width: 640px) {
   .search-form__row {
     grid-template-columns: 1fr;
