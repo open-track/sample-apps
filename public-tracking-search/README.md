@@ -97,8 +97,8 @@ Set `DEMO_MODE=true` in `.env` to explore the UI without an API key:
 
 | Query | Result |
 | --- | --- |
-| `MSCU1234567` | Single container tracking link |
-| `MAEU589677982` | MBL with three container links |
+| `MSCU1234567` | Single container with status `AVAILABLE` |
+| `MAEU589677982` | MBL with three containers (`AVAILABLE`, `LOADED`, `DISCHARGED`) |
 | `NOTFOUND` | Representative contact message |
 
 ## Related docs

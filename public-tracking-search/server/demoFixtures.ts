@@ -14,7 +14,7 @@ export function getDemoSearchResult(query: string): SearchSuccessResponse | Sear
         {
           containerId: 'MSCU1234567',
           trackingPage: `${DEMO_TRACKING_BASE}/MSCU1234567`,
-          status: 'AVAILABLE AT TERMINAL',
+          status: 'AVAILABLE',
         },
       ],
     };
@@ -29,12 +29,12 @@ export function getDemoSearchResult(query: string): SearchSuccessResponse | Sear
         {
           containerId: 'MSCU1234567',
           trackingPage: `${DEMO_TRACKING_BASE}/MSCU1234567`,
-          status: 'AVAILABLE AT TERMINAL',
+          status: 'AVAILABLE',
         },
         {
           containerId: 'TCLU9876543',
           trackingPage: `${DEMO_TRACKING_BASE}/TCLU9876543`,
-          status: 'ON Vessel',
+          status: 'LOADED',
         },
         {
           containerId: 'OOLU2468135',
