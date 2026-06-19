@@ -2,6 +2,8 @@
 
 A minimal TypeScript + React app you can clone, run locally, and remix. It shows a common customer pattern:
 
+![Public tracking search sample app showing MBL results with View links](./docs/screenshot.png)
+
 1. A user lands on a page with a search box
 2. They enter a **container number**, **master bill of lading (MBL)**, or **ocean carrier booking reference**
 3. The app calls the [OpenTrack API](https://developers.opentrack.co/docs/getting-started) and reads the `trackingPage` URL from the response
