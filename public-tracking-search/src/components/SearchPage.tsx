@@ -4,23 +4,32 @@ import { searchTracking, type SearchResult } from '../api/searchTracking';
 import { TrackingLinkButton } from './TrackingLinkButton';
 
 const OPENTRACK_DOCS_URL = 'https://developers.opentrack.co/docs/getting-started';
+const DEMO_SEARCH_QUERY = 'MAEU589677982';
 
 export function SearchPage() {
   const [query, setQuery] = useState('');
   const [result, setResult] = useState<SearchResult>({ status: 'idle' });
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    const trimmedQuery = query.trim();
+  async function runSearch(searchQuery: string) {
+    const trimmedQuery = searchQuery.trim();
     if (!trimmedQuery) {
       return;
     }
 
+    setQuery(trimmedQuery);
     setResult({ status: 'loading' });
 
     const nextResult = await searchTracking(trimmedQuery);
     setResult(nextResult);
+  }
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    await runSearch(query);
+  }
+
+  async function handleDemoSearchClick() {
+    await runSearch(DEMO_SEARCH_QUERY);
   }
 
   return (
@@ -57,6 +66,21 @@ export function SearchPage() {
               {result.status === 'loading' ? 'Searching…' : 'Search'}
             </button>
           </div>
+          {!query.trim() ? (
+            <p className="search-form__demo-hint">
+              Want to see what search looks like? Set <code>DEMO_MODE=true</code> in <code>.env</code>, then try
+              searching{' '}
+              <button
+                className="search-form__demo-link"
+                disabled={result.status === 'loading'}
+                type="button"
+                onClick={handleDemoSearchClick}
+              >
+                {DEMO_SEARCH_QUERY}
+              </button>
+              .
+            </p>
+          ) : null}
         </form>
 
         <SearchResultPanel result={result} />

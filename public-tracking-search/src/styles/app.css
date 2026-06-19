@@ -124,6 +124,34 @@ code {
   cursor: wait;
 }
 
+.search-form__demo-hint {
+  margin: 0.75rem 0 0;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.search-form__demo-link {
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-weight: 600;
+  color: #0369a1;
+  background: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.search-form__demo-link:hover {
+  color: #075985;
+}
+
+.search-form__demo-link:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
 .result-message {
   margin: 1.25rem 0 0;
   padding: 0.95rem 1rem;
